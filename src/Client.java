@@ -1,13 +1,20 @@
 public class Client {
-    String firstName;
-    String lastName;
-    int age;
-    int ticketId;
+    private String firstName;
+    private String lastName;
+    private int age;
+    private int ticketId;
+    private String ticketPersonData;
 
-    public Client(String firstName, String lastName, int age, int ticketId) {
+
+
+    public Client(String firstName, String lastName, int age) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
+    }
+
+    public Client(String firstName, String lastName, int age, int ticketId) {
+        this(firstName,lastName,age);
         this.ticketId = ticketId;
     }
 
@@ -41,5 +48,12 @@ public class Client {
 
     public void setTicketId(int ticketId) {
         this.ticketId = ticketId;
+    }
+    public String getTicketPersonData() {
+        return ticketPersonData;
+    }
+
+    public void setTicketPersonData(String ticketPersonData) {
+        this.ticketPersonData = ticketPersonData;
     }
 }
